@@ -1,0 +1,60 @@
+.exportableContent {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.exportableContent::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    bottom: -50px;
+    left: -50px;
+    background: linear-gradient(45deg, #f3f3f3, #ececec);
+    z-index: -1;
+    transform: rotate(-3deg);
+}
+
+.frameBorder {
+    border: 6px solid #f0f0f0;
+    padding: 16px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    margin: 32px;
+    border-radius: 8px;
+}
+
+.shadowBox {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.shadowBox:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loader {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #3498db;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+}
